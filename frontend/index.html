@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transcrição de Áudio</title>
+    <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
-    <h1>Serviço de Transcrição de Áudio</h1>
+<div class="main-content">
+    <h1>Projeto de audio e texto</h1>
+    <div class="change-content">
+    <!-- <button class="transcrever-audioBtn">Transcrever Audio</button>
+    <button class="converter-audioBtn">Converter Audio</button> -->
+    <button class="transcrever-audioBtn">Mudar opção</button>
+    </div>
+    <section id="transcrever-audio">
     <form id="audioForm" method="post">
         <label for="audioFile">Selecione um arquivo de áudio:</label>
         <input type="file" id="audioFile" name="audioFile" accept="audio/*" required>
@@ -17,6 +25,22 @@
         <h3>Resposta:</h3>
         <pre id="output"></pre>
     </div>
-    <script src="src/js/script.js"></script>
+    </section>
+
+
+    <section id="converter-audio">
+        <div class="container">
+            <h1>Conversor de Texto para Áudio</h1>
+            <textarea id="textInput" placeholder="Digite o texto aqui..."></textarea><br>
+            <button id="generateButton">Gerar Áudio</button>
+            <audio id="audioPlayer" controls></audio>
+        </div>
+    </section>
+
+</div>
+
+<script src="src/js/index.js"></script>
+<script src="src/js/text-to-audio.js"></script>
+<script src="src/js/audioTranscriber.js"></script>
 </body>
 </html>
